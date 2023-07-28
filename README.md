@@ -32,7 +32,8 @@ public class Kata
             var lastNumbers = nAsStr[(i - 1)..].OrderBy(c => c).ToList();
             lastNumbers.Remove(nextNumber);
 
-            return long.Parse(string.Join("", nAsStr[0..(i - 1)], nextNumber, string.Join("", lastNumbers)));
+            return long.Parse(string.Join("", nAsStr[0..(i - 1)],
+                nextNumber, string.Join("", lastNumbers)));
         }
 
         return -1;
